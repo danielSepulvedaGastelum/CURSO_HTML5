@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/warning_logo.png"/>
+    <title>Formularios en HTML</title>
+</head>
+<body>
+
+
+    <h1>Validación</h1>
+
+    <form>
+        <input type="text" required 
+            minlength="3" 
+            maxlength="15"
+            pattern="[A-Za-z ]+"/> <!-- Expresiones regulares-->
+
+        <input type="number" 
+            min="5" 
+            max="20"/>
+
+        <input type="submit"/>
+    </form>
+
+
+    
+    <h1>Formaularios</h1>
+
+    <form method="post" action="enlaces.html" enctype="text/plain">
+        <fieldset>
+            <legend>Información personal</legend>
+
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="nombre..."/>
+            </div>
+            
+            <div>
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" placeholder="Descripción..."></textarea>
+            </div>
+
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="Email..."/>
+            </div>
+
+            <div>
+                <label for="contrasenna">Contraseña:</label>
+                <input type="password" id="contrasenna" placeholder="Contraseña..."/>
+
+            </div>
+
+            <div>
+                Radio:
+                <label for="hombre">Hombre:</label>
+                <input type="radio" name="radio" value="hombre" id="hombre"/>
+                <label for="mujer">Mujer</label>
+                <input type="radio" name="radio" value="mujer" id="mujer"/>
+            </div>
+
+            <div>
+                Checkbox:
+                <label>
+                    <input type="checkbox" name="mayor_edad"/> Mayor de edad
+                </label>
+                <label>
+                    <input type="checkbox" name="menor_edad"/> Menor de edad
+                </label>
+            </div>
+
+            <div>
+                <label>Select</label>
+                <select>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Color:</label>
+                <input  type="color"/>
+            </div>
+
+            <div>
+                <label for="fecha">Fecha:</label>
+                <input type="date"/>
+            </div>
+
+            <div>
+                <label>Mes:</label>
+                <input type="month" name="mes"/>
+            </div>
+
+            <div>
+                <label>Hora:</label>
+                <input type="time" name="hora"/>
+            </div>
+
+            <div>
+                <label>Archivo:</label>
+                <input  type="file"/>
+            </div>
+
+            <div>
+                <label>Imagen:</label>
+                <input type="image" src="img/warning_logo.png" width="20"/> 
+                <!-- Envía formulario como botón y las coordenadas del clic en la imagen-->
+            </div>
+
+            <div>
+                <label>Oculto:</label>
+                <input type="hidden" name="oculto" value="super"/>
+            </div>
+
+            <div>
+                <label>Numero:</label>
+                <input  type="number"/>
+                <!-- Solo se puede introducir números -->
+            </div>
+
+            <div>
+                <label>Rango:</label>
+                <input  type="range" name="rango"/>
+                <!-- manda dato del 0 al 100 -->
+            </div>
+
+            <div>
+                <label>Buscar: </label>
+                <input  type="search" name="buscar"/>
+                <!-- Funciona igual que type="text" pero es mejor semanticamente si es un campo para buscar-->
+                <button>Buscar</button>
+            </div>
+
+            <div>
+                <label>Telefono:</label>
+                <input  type="tel" name="telefono"/>
+                <!-- Funciona igual que type="text" pero es mejor semanticamente si es un campo para telefono-->
+            </div>
+
+            <div>
+                <label>Sitio Web:</label>
+                <input type="url" name="url"/>
+                <!-- incluye una validación-->
+            </div>
+
+            <div>
+                <label>Barra de progreso:</label>
+                <progress max="100" value="45">  </progress>
+            </div>
+
+            <div>
+                <label>Barra de progreso 02:</label>
+                <meter max="100" value="45">  </meter>
+            </div>
+
+            <div>
+                <label>Lista de datos:</label>
+                <input list="frutas" name="input_fruta"/>
+                <datalist id="frutas">
+                    <option value="manzana"/>
+                    <option value="naranja"/>
+                    <option value="cereza"/>
+                    <option value="sandia"/>
+                    <option value="pera"/>
+                </datalist>
+            </div>
+            
+
+
+        </fieldset>
+        
+        <!--Forma 1: Boton-->
+        <input type="submit" value="Enviar formaulario"/>
+        <input type="reset" value="Limpiar formaulario"/>
+
+       
+        <!--Forma 2: Boton
+        <button type="submit">Enviar</button>
+        -->
+    </form>
+
+    
+</body>
+</html>

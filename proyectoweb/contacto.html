@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de contacto</title>
+    <link rel="icon" type="image/png" href="img/warning_logo.png" />
+    <style>
+        article{
+            border-bottom:1px solid gray; 
+            margin-bottom: 10px;
+        }
+
+        div{
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Proyecto</h1>
+        
+        <!--Menu-->
+        <nav>  
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="dieta.html">Dieta</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contacto</h2>
+        <section id="contacto">
+            <article>
+                <form>
+                    <fieldset>
+                        <legend>Datos de contacto</legend>
+                        <div>
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" name="nombre" id="nombre" minlength="3" maxlength="50" width="200" placeholder="Nombre..." required/>
+                        </div>
+                        <div>
+                            <label for="apellidos">Apellidos:</label>
+                            <input type="text" name="apellidos" id="apellidos" minlength="3" maxlength="50" width="200" placeholder="Apellidos..." required/>
+                        </div>
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email" minlength="3" maxlength="50" width="200" placeholder="E-mail..." required/>
+                        </div>
+                        <div>
+                            <label for="edad">edad:</label>
+                            <input type="number" name="edad" id="edad" min="3" max="100" placeholder="Edad..."/>
+                        </div>
+                        <div>
+                            Genero:
+                            <label for="masculino">Masculino</label>
+                            <input type="radio" name="genero" id="masculino"/>
+                            <label for="femenino">Femenino</label>
+                            <input type="radio" name="genero" id="femenino"/>
+                        </div>
+                        <div>
+                            <label for="motivo">Motivo del contacto</label>
+                            <textarea id="motivo" maxlength="1000" rows="5" cols="30" placeholder="Motivo del contacto..."></textarea>
+                        </div>
+                        <input type="submit" value="Enviar"/>
+                </fieldset>
+                </form>
+            </article>
+        </section>
+    </main>
+
+
+    <footer>
+        Proyecto de HTML con ejercicios de Daniel &copy; 2023 - <a href="#top">Arriba</a>
+    </footer>
+
+
+
+</body>
+</html>
